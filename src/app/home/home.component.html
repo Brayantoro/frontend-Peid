@@ -1,0 +1,48 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <lbd-chart
+                  [title]="'Estadísticas de Actividades'"
+                  [subtitle]="'Rendimiento de los porcentajes'"
+                  [chartClass]="'ct-perfect-fourth'"
+                  [chartType]="emailChartType"
+                  [chartData]="emailChartData"
+                  [legendItems]="emailChartLegendItems"
+                  [withHr]="true">
+             
+                </lbd-chart>
+            </div>
+            <div class="col-md-8">
+                <lbd-chart
+                  [title]="'Comportamiento de los usuarios'"
+                  [subtitle]="'24 horas de rendimiento'"
+                  [chartType]="hoursChartType"
+                  [chartData]="hoursChartData"
+                  [chartOptions]="hoursChartOptions"
+                  [chartResponsive]="hoursChartResponsive"
+                  [legendItems]="hoursChartLegendItems"
+                  [withHr]="true">
+                  
+                </lbd-chart>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <lbd-chart
+                  [title]="'2022 Meta'"
+                  [subtitle]="'Metas realizadas en el transcurso'"
+                  [chartType]="activityChartType"
+                  [chartData]="activityChartData"
+                  [chartOptions]="activityChartOptions"
+                  [chartResponsive]="activityChartResponsive"
+                  [legendItems]="activityChartLegendItems"
+                  [withHr]="true">
+        
+                
+                </lbd-chart>
+            </div>
+ 
+        </div>
+    </div>
+</div>

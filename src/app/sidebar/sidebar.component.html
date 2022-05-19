@@ -1,0 +1,76 @@
+
+<div class="sidebar-wrapper">
+    <div class="logo">
+            <div class="logo-img">
+                <img src="/assets/img/angular2-logo-white.png"/>
+            </div>
+            <h4>PEID GRAN COLOMBIA</h4>
+        
+    </div>
+    <ul class="nav responsive-nav">
+        <li *ngIf="isMobileMenu()">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-dashboard"></i>
+				<p class="hidden-lg hidden-md">Panel de control</p>
+            </a>
+        </li>
+        <li class="dropdown" *ngIf="isMobileMenu()">
+              <a class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-globe"></i>
+                    <b class="caret hidden-sm hidden-xs"></b>
+                    <span class="notification hidden-sm hidden-xs">5</span>
+					<p class="hidden-lg hidden-md">
+						5 Notificaciones
+						<b class="caret"></b>
+					</p>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Notificacion 1</a></li>
+                <li><a href="#">Notificacion 2</a></li>
+                <li><a href="#">Notificacion 3</a></li>
+                <li><a href="#">Notificacion 4</a></li>
+                <li><a href="#">Otra Notificacion</a></li>
+              </ul>
+        </li>
+        <li *ngIf="isMobileMenu()">
+           <a>
+                <i class="fa fa-search"></i>
+				<p class="hidden-lg hidden-md">Busqueda</p>
+            </a>
+        </li>
+        <li *ngIf="isMobileMenu()">
+           <a href="">
+               <p>Cuenta</p>
+            </a>
+        </li>
+        <li class="dropdown" *ngIf="isMobileMenu()">
+              <a class="dropdown-toggle" data-toggle="dropdown">
+                    <p>
+    				Desplegar
+    					<b class="caret"></b>
+    				</p>
+
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Accion</a></li>
+                <li><a href="#">otra accion</a></li>
+                <li><a href="#">Otra cosa</a></li>
+                <li><a href="#">Otra accion</a></li>
+                <li class="divider"></li>
+                <li><a href="#">enlace</a></li>
+              </ul>
+        </li>
+        <li *ngIf="isMobileMenu()">
+            <a>
+                <p>Cerrar cesion</p>
+            </a>
+        </li>
+        <li class="separator hidden-lg hidden-md" *ngIf="isMobileMenu()"></li>
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
+            <a  [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+</div>
