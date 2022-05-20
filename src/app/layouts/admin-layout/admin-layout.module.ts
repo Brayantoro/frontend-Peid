@@ -11,7 +11,8 @@ import { AdminLayoutRoutes } from './admin-layout.routing';
 import { HomeComponent } from '../../home/home.component';
 import { UserComponent } from '../../user/user.component';
 import { TablesComponent } from '../../tables/tables.component';
-import { FormularioComponent} from 'app/formulario/formulario.component';
+import { NotificationsComponent } from '../../notifications/notifications.component';
+
 
 
 
@@ -27,7 +28,7 @@ import { FormularioComponent} from 'app/formulario/formulario.component';
     HomeComponent,
     UserComponent,
     TablesComponent,
-   FormularioComponent
+    NotificationsComponent
   
   ]
 })
