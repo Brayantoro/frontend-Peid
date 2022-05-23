@@ -1,7 +1,7 @@
 <div class="main-content" >
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <div class="card">
                     <div class="header">
                         <h4 class="title">Editar Usuario</h4>
@@ -67,33 +67,46 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card card-user">
-                    <div class="image">
-                        <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
-                    </div>
-                    <div class="content">
-                        <div class="author">
-                            <a href="#">
-                                <img class="avatar border-gray" src="assets/img/faces/face-5.jpg" alt="..."/>
-
-                                <h4 class="title">Jorge lopez<br />
-                                    <small>Jorge24</small>
-                                </h4>
-                            </a>
+                
+                   
+                        <div class="container">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>
+                                        <div class="text-center">  Usuarios</div>
+                                      
+                                    </h3>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th layout-align="center center">CODIGO</th>
+                                                <th>EMAIL</th>
+                                                <th>NOMBRE</th>
+                                                <th>PAASWORD</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let usuario of usuarios" class="text-center">
+                                                <td>{{usuario.codigo}}</td>
+                                                <td>{{usuario.email}}</td>
+                                                <td>{{usuario.nombre}}</td>
+                                                <td>{{usuario.password}}</td>
+                                                <td>
+                                                  <button class="btn btn-warning">Editar</button>
+                                                  <button class="btn btn-danger" style="margin: 10px;">Eliminar</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-                        <p class="description text-center"> Encargado de modificacion de datos <br>
-                            Ingeniero para la asistencia  de requisitos<br>
-                             Gestion de  proyectos
-                        </p>
+                        
                     </div>
                     <hr>
-                    <div class="text-center">
-                        <button href="#" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
-                        <button href="#" class="btn btn-simple"><i class="fa fa-twitter"></i></button>
-                        <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+

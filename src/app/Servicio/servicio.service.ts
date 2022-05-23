@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import  { HttpClient } from '@angular/common/http';
 import { ejeEstrategico, objetivoEstrategico, proyecto } from '../models/model.interface';
+import { Observable } from 'rxjs';
+import { Usuario } from 'app/models/usuario.interface';
+
+
 
 
 
@@ -87,7 +91,7 @@ private proyectos:proyecto[]=[
 ];
   constructor(private http:HttpClient) { }
 
-  private  url:string="https://software3peid.azurewebsites.net";
+  private  url:string="https://software3peid.azurewebsites.net/peid";
 
 
 
@@ -103,6 +107,25 @@ getProyecto():proyecto[]{
   return this.proyectos;
 }
 
+getUsuario():Observable<any>{
+  return this.http.get(this.url)
+}
+
+
+saveUsuario(usuario :Usuario){
+  return this.http.post(this.url,usuario)
+}
+
+
+modificarUsuario(id:string ,usuario :Usuario):Observable<any>
+{
+  return this.http.put(this.url+'/'+id,usuario)
+}
+
+eliminarUsuario(id:string ):Observable<any>
+{
+  return this.http.delete(this.url+'/'+id)
+}
 
 
 
