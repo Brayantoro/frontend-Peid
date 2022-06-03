@@ -6,11 +6,6 @@ import { Usuario } from 'app/models/usuario.interface';
 
 
 
-
-
-
-
-
 @Injectable()
 export class ServicioService {
 
@@ -108,7 +103,7 @@ getProyecto():proyecto[]{
 }
 
 getUsuario():Observable<any>{
-  return this.http.get(this.url)
+  return this.http.get(this.url+"/usuarios")
 }
 
 

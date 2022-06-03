@@ -28,7 +28,7 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
   ],
   declarations: [
     HomeComponent,
-    UserComponent,
+   // UserComponent,
     TablesComponent,
     NotificationsComponent
   

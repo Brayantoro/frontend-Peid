@@ -12,6 +12,9 @@ import { SidebarModule } from './sidebar/sidebar.module';
 import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { UserComponent } from './user/user.component';
+import { ServicioService } from './Servicio/servicio.service';
+
 ;
 
 
@@ -26,15 +29,19 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     FooterModule,
     SidebarModule,
     AppRoutingModule
+
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    UserComponent
+
   
    
   
   ],
-  providers: [],
+  providers: [ServicioService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

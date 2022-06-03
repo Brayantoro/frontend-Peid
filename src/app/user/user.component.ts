@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,AfterViewInit } from '@angular/core';
 import { Usuario } from 'app/models/usuario.interface';
 import { ServicioService } from 'app/Servicio/servicio.service';
 
@@ -7,16 +7,17 @@ import { ServicioService } from 'app/Servicio/servicio.service';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent implements OnInit {
-
+export class UserComponent implements OnInit,AfterViewInit{
 
   usuarios:Usuario[];
-  constructor() { }
+  constructor(private servicioUsu:ServicioService) {
+   
+   }
  
   ngOnInit() {
     this.listarTareas();
   }
-  private servicioUsu:ServicioService
+
   listarTareas(){
     this.servicioUsu.getUsuario().subscribe(
       res =>{this.usuarios=res},
@@ -24,7 +25,9 @@ export class UserComponent implements OnInit {
     );
   }
 
+  ngAfterViewInit(): void {
 
+  }
 
  
 
