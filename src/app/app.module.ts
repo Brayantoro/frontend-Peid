@@ -24,6 +24,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
 
 import { EditarComponent } from './editar/editar.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 ;
 
 
@@ -50,7 +52,9 @@ import { EditarComponent } from './editar/editar.component';
     AppComponent,
     AdminLayoutComponent,
     UserComponent,
-    EditarComponent
+    EditarComponent,
+    LoginComponent,
+    RegisterComponent
 
   
    
