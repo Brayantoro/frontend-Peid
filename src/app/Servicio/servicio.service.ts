@@ -107,19 +107,22 @@ getUsuario():Observable<any>{
 }
 
 
-saveUsuario(usuario :Usuario){
-  return this.http.post(this.url,usuario)
+saveUsuario(codigo:number,nombre:string,email:string,password:string):Observable<any>{
+  let objUsu={codigo,nombre,email,password}
+  return this.http.post(this.url+"/usuario",objUsu)
 }
 
 
-modificarUsuario(id:string ,usuario :Usuario):Observable<any>
+modificarUsuario(codigo:number,nombre:string,email:string,password:string):Observable<any>
 {
-  return this.http.put(this.url+'/'+id,usuario)
+  let objUsu={codigo,nombre,email,password}
+
+  return this.http.put(this.url+'/modificar/'+codigo,objUsu)
 }
 
 eliminarUsuario(id:string ):Observable<any>
 {
-  return this.http.delete(this.url+'/'+id)
+  return this.http.delete(this.url+'/eliminar/'+id)
 }
 
 

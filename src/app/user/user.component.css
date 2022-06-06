@@ -1,0 +1,15 @@
+/* vamos a centrar el texto */
+.centrar {
+    text-align: center;
+  }
+  
+  /* vamos a izquierda el texto */
+  .izquierda {
+    text-align: left;
+  }
+  
+  /* vamos a derecha el texto */
+  .derecha {
+    text-align: right;
+  }
+  

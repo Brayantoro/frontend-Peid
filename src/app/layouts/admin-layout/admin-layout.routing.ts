@@ -5,6 +5,8 @@ import { UserComponent } from '../../user/user.component';
 import { TablesComponent } from '../../tables/tables.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 
+import { EditarComponent } from 'app/editar/editar.component';
+
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -12,4 +14,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'user',           component: UserComponent },
     { path: 'table',          component: TablesComponent },
     {  path: 'notifications',  component: NotificationsComponent},
+    {  path: 'editar/:id',  component:EditarComponent},
 ];

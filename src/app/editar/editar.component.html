@@ -1,0 +1,54 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Actulizar datos usuario</h4>
+                </div>
+                <div class="content">
+                    <form>
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Nombre de usuario</label>
+                                    <input [formControl]="nombre" type="text" class="form-control"
+                                        placeholder="nombre de usuario">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Direccion de correo</label>
+                                    <input [formControl]="email" type="email" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Codigo</label>
+                                    <input [formControl]="codigo" type="text" class="form-control" placeholder="codigo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Contraseña usuario</label>
+                                    <input [formControl]="password" type="number" class="form-control"
+                                        placeholder="Contraseña">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-info btn-fill  "
+                            (click)="UsuarioActulizar()">Actulizar</button>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>

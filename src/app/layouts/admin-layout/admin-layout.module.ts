@@ -12,18 +12,21 @@ import { HomeComponent } from '../../home/home.component';
 import { UserComponent } from '../../user/user.component';
 import { TablesComponent } from '../../tables/tables.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
+import {MatInputModule} from '@angular/material/input';
 
-
-
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     LbdModule,
- 
+   
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
   ],
   declarations: [
